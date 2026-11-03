@@ -58,6 +58,16 @@
   .mode .dot { color: var(--amber); }
   ol { font-size: 16.5px; line-height: 1.6; color: #4a3a22; padding-left: 22px; }
   ol li { margin-bottom: 8px; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .shots figure { margin: 0; }
+  .shots img {
+    width: 100%; border-radius: 14px; display: block;
+    box-shadow: 0 12px 30px rgba(74, 54, 20, 0.28);
+  }
+  .shots figcaption {
+    margin-top: 10px; font-size: 14.5px; line-height: 1.5; color: #4a3a22;
+  }
+  .shots figcaption strong { display: block; font-size: 15.5px; }
   .note {
     background: var(--card); border: 1px solid var(--line);
     border-radius: 16px; padding: 16px 20px; font-size: 15.5px; line-height: 1.55;
@@ -70,6 +80,7 @@
     h1 { font-size: 48px; }
     .tagline { font-size: 20px; }
     .modes { grid-template-columns: 1fr; }
+    .shots { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -110,6 +121,27 @@
         <p>Full radio squash. Everything lifted toward the same
         loudness, loud parts pinned, quiet parts raised. Committed.</p>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure>
+        <img src="shot-light-touch.png" alt="Squash in Light Touch mode: the gain reduction meter barely moves">
+        <figcaption><strong>Light Touch</strong>
+        The gain-reduction meter barely stirs &mdash; a nudge toward even, never a squeeze.</figcaption>
+      </figure>
+      <figure>
+        <img src="shot-radio-limit.png" alt="Squash in Radio Limit mode: moderate gain reduction, output sitting warm and steady">
+        <figcaption><strong>Radio Limit</strong>
+        The default tune: levelling along smoothly, the output sitting warm and steady.</figcaption>
+      </figure>
+      <figure>
+        <img src="shot-max-squash.png" alt="Squash in Max Squash mode: deep gain reduction, output lifted to the ceiling">
+        <figcaption><strong>Max Squash</strong>
+        Deep reduction and everything lifted to the ceiling &mdash; full radio squash.</figcaption>
+      </figure>
     </div>
   </section>
 

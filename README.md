@@ -20,6 +20,17 @@ Requires a Mac on **macOS 14.2 or later**. Runs on Apple Silicon and Intel.
 - **Radio Limit** (default) — smooth, transparent leveling; the tune Squash was built around.
 - **Max Squash** — full radio squash; everything lifted toward the same loudness.
 
+## Screenshots
+
+![Squash in Light Touch mode](shot-light-touch.png)
+*Light Touch — the gain-reduction meter barely stirs.*
+
+![Squash in Radio Limit mode](shot-radio-limit.png)
+*Radio Limit — the default tune: smooth levelling, output warm and steady.*
+
+![Squash in Max Squash mode](shot-max-squash.png)
+*Max Squash — deep reduction, everything lifted to the ceiling.*
+
 ## Installing
 
 1. Unzip and drag **Squash** into Applications.
