@@ -1,6 +1,6 @@
 # Squash
 
-**Radio Station Style Limiting for Internet Audio Levels**
+**Radio station limiting for internet audio levels**
 
 Squash is a free limiter for your Mac's system audio. It helps control
 loud DJs, quiet interviews and blaring station IDs at a steady,
