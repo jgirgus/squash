@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squash — radio-station limiting for the rest of us</title>
+<meta name="description" content="Squash is a free one-knob limiter for your Mac's system audio. It holds loud DJs, quiet interviews and blaring station IDs at one steady, comfortable level.">
+<meta property="og:title" content="Squash — radio-station limiting for the rest of us">
+<meta property="og:description" content="A free one-knob limiter for your Mac's system audio. One steady, comfortable level for everything you listen to.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jgirgus.github.io/squash/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="squash-icon.png">
+<style>
+  :root {
+    --ink: #342a1c;
+    --soft: #6d573a;
+    --faint: #8c7048;
+    --card: rgba(255, 252, 244, 0.72);
+    --line: rgba(96, 74, 46, 0.28);
+    --charcoal: #232326;
+    --amber: #ff9500;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, #fcf3da 0%, #f3e3ba 55%, #e9cd97 100%);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 64px; }
+  header { text-align: center; }
+  header img {
+    width: 172px; height: 172px; border-radius: 40px;
+    box-shadow: 0 18px 44px rgba(74, 54, 20, 0.35);
+  }
+  h1 { font-size: 64px; margin: 26px 0 4px; letter-spacing: -1px; }
+  .tagline { font-size: 24px; color: var(--soft); margin: 0 0 30px; }
+  .download {
+    display: inline-block; background: var(--charcoal); color: #fdf6e3;
+    font-size: 20px; font-weight: 600; text-decoration: none;
+    padding: 16px 38px; border-radius: 999px;
+    box-shadow: 0 10px 26px rgba(35, 35, 38, 0.35);
+  }
+  .download:hover { background: #333338; }
+  .meta { margin-top: 14px; font-size: 14px; color: var(--faint); }
+  section { margin-top: 52px; }
+  h2 { font-size: 22px; margin: 0 0 12px; }
+  p { font-size: 17px; line-height: 1.55; color: #4a3a22; }
+  .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .mode {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 18px 16px;
+  }
+  .mode h3 { margin: 0 0 8px; font-size: 17px; }
+  .mode p { margin: 0; font-size: 14.5px; line-height: 1.5; }
+  .mode .dot { color: var(--amber); }
+  ol { font-size: 16.5px; line-height: 1.6; color: #4a3a22; padding-left: 22px; }
+  ol li { margin-bottom: 8px; }
+  .note {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 16px 20px; font-size: 15.5px; line-height: 1.55;
+  }
+  footer {
+    margin-top: 60px; text-align: center; font-size: 14px;
+    color: var(--faint); line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 48px; }
+    .tagline { font-size: 20px; }
+    .modes { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="squash-icon.png" alt="The Squash app icon: two stereo meter bars, green rising to orange">
+    <h1>Squash</h1>
+    <p class="tagline">Radio-station limiting for the rest of us.</p>
+    <a class="download" href="https://github.com/jgirgus/squash/releases/latest/download/Squash.zip">Download Squash</a>
+    <p class="meta">Free &middot; macOS 14.2 or later &middot; Apple Silicon &amp; Intel &middot; Version 1.0</p>
+  </header>
+
+  <section>
+    <h2>What it does</h2>
+    <p>Radio is mixed for radio stations, not for your ears: the music sits
+    at one level, then the DJ comes in twice as loud and the station ID
+    tries to take your head off. Squash listens to <em>all</em> of your
+    Mac&rsquo;s audio and holds it at one steady, comfortable level &mdash;
+    the same trick a broadcast limiter does at the station, running on
+    your machine instead. One knob. No wrong answers.</p>
+  </section>
+
+  <section>
+    <h2>Three modes, one knob</h2>
+    <div class="modes">
+      <div class="mode">
+        <h3><span class="dot">&#9679;</span> Light Touch</h3>
+        <p>The gentle scheme. Even with the knob all the way up it stays
+        polite &mdash; a nudge toward even, never a squeeze.</p>
+      </div>
+      <div class="mode">
+        <h3><span class="dot">&#9679;</span> Radio Limit</h3>
+        <p>The default, and the one Squash was tuned around: smooth,
+        transparent leveling that makes a whole station behave.</p>
+      </div>
+      <div class="mode">
+        <h3><span class="dot">&#9679;</span> Max Squash</h3>
+        <p>Full radio squash. Everything lifted toward the same
+        loudness, loud parts pinned, quiet parts raised. Committed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Installing</h2>
+    <ol>
+      <li>Download the zip and open it. Drag <strong>Squash</strong> into your Applications folder.</li>
+      <li>Double-click Squash once. macOS will refuse &mdash; it&rsquo;s careful with apps from outside the App Store. That&rsquo;s expected.</li>
+      <li>Open <strong>System Settings &rarr; Privacy &amp; Security</strong>, scroll down, and click <strong>Open Anyway</strong>. You only ever do this once.</li>
+      <li>Launch Squash, press the power button, and allow audio capture when asked &mdash; that prompt is the app doing its job.</li>
+    </ol>
+    <div class="note">Squash processes your Mac&rsquo;s audio <em>on your Mac</em>.
+    Nothing is recorded, nothing is uploaded, there&rsquo;s nothing to sign up for.
+    It only works while it&rsquo;s running &mdash; quit it and your Mac sounds
+    exactly as it did before.</div>
+  </section>
+
+  <footer>
+    Squash is freeware: free to download, free to pass along.<br>
+    Provided as-is, with no warranty. If it makes your radio listenable, it did its job.
+  </footer>
+
+</div>
+</body>
+</html>
