@@ -42,4 +42,4 @@ it's running. Quit and your Mac sound is unchanged.
 
 ## Freeware
 
-Squash is freeware: free to download, free to pass along. As-is, no warranty.
+Squash is freeware: free to download, free to share.
