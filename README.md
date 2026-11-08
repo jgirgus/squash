@@ -20,11 +20,9 @@ Requires a Mac on **macOS 14.2 or later**. Runs on Apple Silicon and Intel.
 - **A built-in governor** — however far you turn the knob, the leveling can only go so far, and a separate safety limiter catches the peaks.
 - **Smooth recovery** — the gain eases back instead of bouncing, so the level never breathes or pumps.
 
-## Screenshots
+## Screenshot
 
-![Squash at 25%](shot-gentle.png)
 ![Squash at 50%](shot-radio.png)
-![Squash at 90%](shot-full.png)
 
 ## Installing
 
@@ -33,7 +31,7 @@ Requires a Mac on **macOS 14.2 or later**. Runs on Apple Silicon and Intel.
    from outside the App Store.)
 3. Open **System Settings → Privacy & Security**, scroll down, and click
    **Open Anyway**. (You only need to do this once.)
-4. Launch Squash, press the power button, and allow audio capture when
+4. Launch Squash — it starts by itself — and allow audio capture when
    asked. (That prompt is the app doing its job.)
 
 Squash processes your Mac's audio on your Mac. Nothing is recorded,
