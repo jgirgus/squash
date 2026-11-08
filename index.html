@@ -80,6 +80,9 @@
   .details figcaption strong {
     display: block; font-size: 16px; color: var(--ink); margin-bottom: 4px;
   }
+  .hood ul { padding-left: 20px; margin: 14px 0 0; }
+  .hood li { margin: 9px 0; }
+  .hood strong { color: var(--ink); }
   .note {
     background: var(--card); border: 1px solid var(--line);
     border-radius: 16px; padding: 16px 20px; font-size: 15.5px; line-height: 1.55;
@@ -192,6 +195,67 @@
         is doing for you.</figcaption>
       </figure>
     </div>
+  </section>
+
+  <section class="hood">
+    <h2>Under the hood</h2>
+    <p class="sub">One knob on the surface; a small broadcast chain
+    underneath. Squash splits the work the way a radio station&rsquo;s
+    processor does &mdash; a leveller to even things out, then a safety
+    limiter to catch what gets past it.</p>
+    <div class="modes">
+      <div class="mode">
+        <h3><span class="dot">&#9679;</span> The leveller</h3>
+        <p>The knob sets this stage&rsquo;s threshold: &minus;1 dB at
+        zero, down to &minus;36 dB at full, on a gentle curve (50% lands
+        at &minus;15 dB). Everything louder than the threshold is pulled
+        down toward it, and automatic makeup lifts the result back
+        toward the ceiling &mdash; which is what raises the quiet parts
+        and tames the loud ones in a single move.</p>
+      </div>
+      <div class="mode">
+        <h3><span class="dot">&#9679;</span> The governor</h3>
+        <p>An unbounded leveller would let you flatten music
+        completely, so this one&rsquo;s gain window is fenced: at most
+        14 dB of reduction, at most 15 dB of makeup. Turn the knob as
+        far as you like &mdash; the leveller can only go so far, and
+        whatever is left over is the safety stage&rsquo;s problem, not
+        a crushed mix.</p>
+      </div>
+      <div class="mode">
+        <h3><span class="dot">&#9679;</span> The safety limiter</h3>
+        <p>A plain brickwall at the &minus;1 dB ceiling, with no makeup
+        and a fast 120 ms release. It does nothing until a peak gets
+        past the leveller &mdash; then it catches exactly that peak and
+        steps aside again. In normal listening, this stage barely
+        wakes up.</p>
+      </div>
+    </div>
+    <ul>
+      <li><strong>Lookahead, twice over.</strong> Each stage holds the
+      audio back 1 ms and watches what&rsquo;s coming, so gain
+      reduction is already in place before a peak arrives. Total
+      latency: 2 ms &mdash; far too small to notice.</li>
+      <li><strong>Anti-pumping release.</strong> The leveller recovers
+      in 400 ms when it&rsquo;s barely working. The deeper it has to
+      dig (past 6 dB), the slower it lets go &mdash; stretching toward
+      a full second, with the recovery rate capped between 12 and
+      5 dB per second, slowest when deepest &mdash; so the level
+      can&rsquo;t bounce in time with the beat.</li>
+      <li><strong>Warmth.</strong> Before the leveller, a touch of
+      tanh soft-saturation (fixed at 20%) rounds the peaks and adds a
+      trace of odd harmonics &mdash; about 1% third harmonic on a loud
+      tone. It sits before the detector, so the ceiling still has the
+      last word.</li>
+      <li><strong>Stereo, linked.</strong> The detector follows the
+      louder of the two channels and applies one shared gain to both,
+      so the stereo image never wanders.</li>
+      <li><strong>Honest limits.</strong> Squash limits sample peaks,
+      not inter-sample true peaks; the &minus;1 dB ceiling leaves
+      headroom for that. And Bypass is a true bypass &mdash; unity
+      gain, no warmth, no limiting, no makeup &mdash; for honest
+      A/B comparisons.</li>
+    </ul>
   </section>
 
   <section>
