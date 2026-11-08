@@ -68,6 +68,18 @@
     text-align: center;
   }
   .shots figcaption strong { display: block; font-size: 15.5px; }
+  .details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .details figure {
+    margin: 0; background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 16px;
+  }
+  .details img { width: 100%; border-radius: 10px; display: block; }
+  .details figcaption {
+    margin-top: 12px; font-size: 14.5px; line-height: 1.55; color: var(--body);
+  }
+  .details figcaption strong {
+    display: block; font-size: 16px; color: var(--ink); margin-bottom: 4px;
+  }
   .note {
     background: var(--card); border: 1px solid var(--line);
     border-radius: 16px; padding: 16px 20px; font-size: 15.5px; line-height: 1.55;
@@ -80,6 +92,7 @@
     h1 { font-size: 48px; }
     .tagline { font-size: 20px; }
     .modes { grid-template-columns: 1fr; }
+    .details { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -130,6 +143,53 @@
       <figure>
         <img src="shot-radio.png" alt="Squash at 50%: steady gain reduction, output sitting warm and steady">
         <figcaption><strong>At 50% &mdash; the starting point</strong></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>A closer look</h2>
+    <div class="details">
+      <figure>
+        <img src="detail-knob.png" alt="Close-up of the Squash knob at 50%, its band green, yellow and orange">
+        <figcaption><strong>The knob</strong>
+        The only control. Drag up or down to turn it &mdash; up means
+        Squash holds the level steadier. The band&rsquo;s colour shows
+        where it&rsquo;s set: green at the gentle end, through yellow
+        and orange, to red at full. It starts at 50%.</figcaption>
+      </figure>
+      <figure>
+        <img src="detail-gr.png" alt="Close-up of the gain reduction meter showing -4.8 dB">
+        <figcaption><strong>Gain Reduction</strong>
+        Squash at work. This meter shows how much it&rsquo;s turning
+        the sound down, moment by moment, to keep the loud parts in
+        line &mdash; squeezing in from the right, like the meter on a
+        broadcast limiter. Yellow is working, orange is pushing; red
+        is saved for when it&rsquo;s really leaning on the signal.</figcaption>
+      </figure>
+      <figure>
+        <img src="detail-output.png" alt="Close-up of the stereo Output meter and the Output Volume slider">
+        <figcaption><strong>Output</strong>
+        What actually reaches your ears, left and right, after Squash.
+        However wild the level gets upstream, this stays steady.
+        Output Volume below it is just your Mac&rsquo;s volume &mdash;
+        the final level, set here or with the volume keys.</figcaption>
+      </figure>
+      <figure>
+        <img src="detail-power.png" alt="Close-up of the power button, its thin green ring lit">
+        <figcaption><strong>Power</strong>
+        Squash starts itself the moment you open it &mdash; if the
+        ring is green, it&rsquo;s running. The button is only there
+        for switching it off, and the line under the title will
+        remind you how to start it again.</figcaption>
+      </figure>
+      <figure>
+        <img src="detail-bypass.png" alt="Close-up of the Bypass switch">
+        <figcaption><strong>Bypass</strong>
+        For comparing. Flip Bypass on and you hear the original
+        sound, completely untouched; flip it off and Squash steps
+        back in. It&rsquo;s the quickest way to hear what the app
+        is doing for you.</figcaption>
       </figure>
     </div>
   </section>
