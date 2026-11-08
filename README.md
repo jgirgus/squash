@@ -5,7 +5,7 @@
 Squash is a free limiter for your Mac's system audio. It helps control
 loud DJs, quiet interviews and blaring station IDs at a steady,
 comfortable level — similar to a broadcast limiter at a radio station.
-One knob control, three modes.
+One knob control.
 
 ## Download
 
@@ -14,17 +14,17 @@ One knob control, three modes.
 
 Requires a Mac on **macOS 14.2 or later**. Runs on Apple Silicon and Intel.
 
-## The three modes
+## One knob
 
-- **Light Touch** — the gentle scheme. Even with the knob all the way up it stays polite.
-- **Radio Limit** — the default, and the one Squash was tuned around: smooth, transparent leveling.
-- **Max Squash** — everything lifted toward the same loudness, loud parts pinned, quiet parts raised.
+- **Radio Limit** — the one scheme, and the one Squash was tuned around: smooth, transparent leveling.
+- **A built-in governor** — however far you turn the knob, the leveling can only go so far, and a separate safety limiter catches the peaks.
+- **Smooth recovery** — the gain eases back instead of bouncing, so the level never breathes or pumps.
 
 ## Screenshots
 
-![Squash in Light Touch mode](shot-light-touch.png)
-![Squash in Radio Limit mode](shot-radio-limit.png)
-![Squash in Max Squash mode](shot-max-squash.png)
+![Squash at 25%](shot-gentle.png)
+![Squash at 50%](shot-radio.png)
+![Squash at 90%](shot-full.png)
 
 ## Installing
 
